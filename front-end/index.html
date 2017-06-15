@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="52byr, byr, 北邮, 北邮人">
+    <meta name="description" content="北邮人论坛bbs.byr.cn十大热门话题回顾">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <title>52BYR</title>
+    <style media="screen">
+      .wrp{
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        position: absolute;
+        text-align: center;
+        background-color: #F2F2F2;
+      }
+
+      .loading{
+        display: block;
+        width: 200px;
+        height: 100px;
+        line-height: 100px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin-left: -100px;
+        margin-top: -50px;
+      }
+
+      #app{
+        z-index: 100;
+        position: absolute;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrp"><span class="loading"></span></div>
+    <div id="app"></div>
+    <script type="text/javascript">
+      var loading = document.querySelector('.loading');
+      var texts = ['正在拼命加载', '少年，不要慌', '年轻人，不要着急', '大爷，您又来了'];
+      var loadingText = texts[Math.floor(Math.random() * texts.length)];
+      var len = loadingText.length;
+      var typewriter = function(){
+        setTimeout(function(){
+          var cnt = (loading.innerText.length + 1) % (len + 1);
+          loading.innerText = loadingText.slice(0, cnt);
+          typewriter();
+        }, 250);
+      };
+      typewriter();
+    </script>
+    <script src="//101.200.52.241:8080/dist/build.js" async></script>
+    <!-- <script src="./dist/build.js" async></script> -->
+    <script type="text/javascript" src="http://tajs.qq.com/stats?sId=59689839" charset="UTF-8" async></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-63929964-4', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+  </body>
+</html>
