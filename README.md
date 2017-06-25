@@ -28,7 +28,7 @@ npm run build
 ```
 
 
-# source-data 
+# spider 
 use node-fetch to fetch bbs top 10 topics
 
 ## setup
